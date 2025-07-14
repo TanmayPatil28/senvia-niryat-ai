@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { checkCompliance, generateDocument, translateText } from '../api'
+import { products, countries } from '../sampleData'
 
 type ComplianceType = {
   readinessScore: number
@@ -45,11 +46,21 @@ const ExportCopilot = () => {
       <h2 className="text-2xl font-bold mb-4">Export Compliance Copilot</h2>
       <div className="mb-4">
         <label className="block mb-1 font-medium">Product</label>
-        <input className="input-field" value={product} onChange={e => setProduct(e.target.value)} placeholder="e.g. Spices" />
+        <select className="input-field" value={product} onChange={e => setProduct(e.target.value)} title="Select product">
+          <option value="">Select product</option>
+          {products.map(p => (
+            <option key={p.value} value={p.value}>{p.label}</option>
+          ))}
+        </select>
       </div>
       <div className="mb-4">
         <label className="block mb-1 font-medium">Destination Country</label>
-        <input className="input-field" value={country} onChange={e => setCountry(e.target.value)} placeholder="e.g. USA" />
+        <select className="input-field" value={country} onChange={e => setCountry(e.target.value)} title="Select country">
+          <option value="">Select country</option>
+          {countries.map(c => (
+            <option key={c.value} value={c.value}>{c.label}</option>
+          ))}
+        </select>
       </div>
       <div className="mb-4">
         <button className="btn-primary w-full" onClick={handleCheck} disabled={loading}>

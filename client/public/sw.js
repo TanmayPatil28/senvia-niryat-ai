@@ -5,8 +5,9 @@ self.addEventListener('install', event => {
         '/',
         '/index.html',
         '/manifest.json',
-        '/icon-192.png',
-        '/icon-512.png',
+        // Only cache icons if they exist
+        // '/icon-192.png',
+        // '/icon-512.png',
       ])
     })
   )

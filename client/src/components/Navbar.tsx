@@ -25,14 +25,14 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200" style={{ fontSize: '1.08rem' }}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2" title="Go to Home">
               <Bot className="h-8 w-8 text-primary-600" aria-label="SenviaNiryat.AI logo" />
-              <span className="text-xl font-bold text-gray-900" style={{ letterSpacing: '0.02em' }}>
+              <span className="text-xl font-bold text-gray-900 navbar-title">
                 Senvia Niryat AI
               </span>
             </Link>
@@ -47,12 +47,11 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-200 ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-200 navbar-link ${
                     isActive 
                       ? 'bg-primary-100 text-primary-700' 
                       : 'text-gray-700 hover:text-primary-700 hover:bg-gray-100'
                   }`}
-                  style={{ fontSize: '1.08rem', fontWeight: 500 }}
                   title={`Go to ${item.label}`}
                 >
                   <Icon className="h-5 w-5" />
@@ -92,12 +91,11 @@ const Navbar = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center space-x-3 px-5 py-4 rounded-lg transition-colors duration-200 ${
+                    className={`flex items-center space-x-3 px-5 py-4 rounded-lg transition-colors duration-200 navbar-link ${
                       isActive 
                         ? 'bg-primary-100 text-primary-700' 
                         : 'text-gray-700 hover:text-primary-700 hover:bg-gray-100'
                     }`}
-                    style={{ fontSize: '1.08rem', fontWeight: 500 }}
                     title={`Go to ${item.label}`}
                   >
                     <Icon className="h-6 w-6" />

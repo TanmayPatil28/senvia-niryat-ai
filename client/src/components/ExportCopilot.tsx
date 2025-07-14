@@ -41,9 +41,28 @@ const ExportCopilot = () => {
     setLoading(false)
   }
 
+  const handleDemo = () => {
+    setProduct('spices')
+    setCountry('usa')
+    setQuery('What certifications are needed for spices export to USA?')
+    setLanguage('en')
+    setCompliance({
+      readinessScore: 0.95,
+      requiredCertifications: ['FSSAI', 'FDA'],
+      labelingStandards: ['English', 'Batch Number'],
+      countryNorms: ['US FDA'],
+      checklist: ['Invoice', 'COO', 'Product Declaration']
+    })
+    setDocument('/documents/sample.pdf')
+    setTranslation('FSSAI and FDA certifications are required for spices export to USA.')
+  }
+
   return (
     <div className="max-w-xl mx-auto p-6 card mt-8">
       <h2 className="text-2xl font-bold mb-4">Export Compliance Copilot</h2>
+      <button className="btn-secondary w-full mb-4" onClick={handleDemo}>
+        Demo Mode (Auto-fill)
+      </button>
       <div className="mb-4">
         <label className="block mb-1 font-medium">Product</label>
         <select className="input-field" value={product} onChange={e => setProduct(e.target.value)} title="Select product">

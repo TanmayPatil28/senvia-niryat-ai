@@ -1,12 +1,12 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import Navbar from './components/Navbar'
-import HomePage from './pages/HomePage'
-import DashboardPage from './pages/DashboardPage'
-import DocumentsPage from './pages/DocumentsPage'
-import AnalyticsPage from './pages/AnalyticsPage'
-import TrackingPage from './pages/TrackingPage'
+import Navbar from './components/Navbar.tsx'
+import HomePage from './pages/HomePage.tsx'
+import DashboardPage from './pages/DashboardPage.tsx'
+import DocumentsPage from './pages/DocumentsPage.tsx'
+import AnalyticsPage from './pages/AnalyticsPage.tsx'
+import TrackingPage from './pages/TrackingPage.tsx'
 
 function App() {
   return (

@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar.tsx'
 import HomePage from './pages/HomePage.tsx'
+import Onboarding from './pages/Onboarding.tsx'
 import DashboardPage from './pages/DashboardPage.tsx'
 import DocumentsPage from './pages/DocumentsPage.tsx'
 import AnalyticsPage from './pages/AnalyticsPage.tsx'
@@ -20,6 +21,7 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/documents" element={<DocumentsPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />

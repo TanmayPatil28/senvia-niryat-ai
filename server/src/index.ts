@@ -3,8 +3,8 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import dotenv from 'dotenv'
-import { errorHandler } from './middleware/errorHandler.js'
-import { notFound } from './middleware/notFound.js'
+import { errorHandler } from './middleware/errorHandler'
+import { notFound } from './middleware/notFound'
 import apiRoutes from './routes/index'
 
 // Load environment variables

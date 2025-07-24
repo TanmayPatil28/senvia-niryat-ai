@@ -11,7 +11,7 @@ import apiRoutes from './routes/index'
 dotenv.config()
 
 const app = express()
-const PORT = process.env.PORT || 6060
+const PORT = process.env.PORT || 7000
 
 // Middleware
 app.use(helmet())

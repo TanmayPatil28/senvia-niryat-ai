@@ -9,20 +9,36 @@ import {
   MapPin,
   Menu,
   X,
-  Bot
+  Bot,
+  Users,
+  LogOut,
+  User
 } from 'lucide-react'
+import { useAuth } from '../auth/AuthContext'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+  const { user, isAuthenticated, logout } = useAuth()
 
-  const navItems = [
+  const publicNavItems = [
     { path: '/', label: 'Home', icon: Home },
+  ]
+
+  const authenticatedNavItems = [
     { path: '/dashboard', label: 'Dashboard', icon: BarChart3 },
     { path: '/documents', label: 'Documents', icon: FileText },
     { path: '/analytics', label: 'Analytics', icon: TrendingUp },
     { path: '/tracking', label: 'Tracking', icon: MapPin },
+    { path: '/team', label: 'Team', icon: Users },
   ]
+
+  const navItems = isAuthenticated ? authenticatedNavItems : publicNavItems
+
+  const handleLogout = async () => {
+    await logout()
+    setIsOpen(false)
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
@@ -39,7 +55,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = location.pathname === item.path
@@ -59,6 +75,35 @@ const Navbar = () => {
                 </Link>
               )
             })}
+
+            {/* Auth Section */}
+            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-200">
+              {isAuthenticated ? (
+                <>
+                  <div className="flex items-center space-x-2 text-sm text-gray-600">
+                    <User className="h-4 w-4" />
+                    <span>{user?.firstName} {user?.lastName}</span>
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center space-x-2 px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200"
+                    title="Sign Out"
+                  >
+                    <LogOut className="h-5 w-5" />
+                    <span>Sign Out</span>
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/auth"
+                  className="flex items-center space-x-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200"
+                  title="Sign In"
+                >
+                  <User className="h-5 w-5" />
+                  <span>Sign In</span>
+                </Link>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -103,6 +148,34 @@ const Navbar = () => {
                   </Link>
                 )
               })}
+
+              {/* Mobile Auth Section */}
+              <div className="pt-4 mt-4 border-t border-gray-200">
+                {isAuthenticated ? (
+                  <>
+                    <div className="flex items-center space-x-3 px-5 py-2 text-sm text-gray-600">
+                      <User className="h-5 w-5" />
+                      <span>{user?.firstName} {user?.lastName}</span>
+                    </div>
+                    <button
+                      onClick={handleLogout}
+                      className="flex items-center space-x-3 px-5 py-4 text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200 w-full"
+                    >
+                      <LogOut className="h-6 w-6" />
+                      <span>Sign Out</span>
+                    </button>
+                  </>
+                ) : (
+                  <Link
+                    to="/auth"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center space-x-3 px-5 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200"
+                  >
+                    <User className="h-6 w-6" />
+                    <span>Sign In</span>
+                  </Link>
+                )}
+              </div>
             </div>
           </motion.div>
         )}

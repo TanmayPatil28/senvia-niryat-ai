@@ -1,4 +1,6 @@
 import { Router } from 'express'
+import authRoutes from './auth'
+import teamRoutes from './teams'
 
 const router = Router()
 
@@ -6,6 +8,11 @@ const router = Router()
 router.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() })
 })
+
+// Authentication routes
+router.use('/auth', authRoutes)
+// Team management routes
+router.use('/teams', teamRoutes)
 
 // Export compliance endpoints
 router.use('/compliance', require('./compliance').default)

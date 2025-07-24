@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import jwt, { SignOptions } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import Joi from 'joi';
 import { db } from '../services/database';
 import { CreateUserRequest, LoginRequest, UserResponse } from '../models/User';

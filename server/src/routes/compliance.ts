@@ -4,17 +4,28 @@ const router = Router()
 
 // AI-powered compliance reasoning
 router.post('/check', (req, res) => {
-  // TODO: Integrate with AI service for compliance reasoning
+  // Realistic demo logic: respond based on product/country
+  const { product, country } = req.body
+  let response = {
+    readinessScore: 0.95,
+    requiredCertifications: ['FSSAI', 'FDA'],
+    labelingStandards: ['English', 'Batch Number'],
+    countryNorms: ['US FDA'],
+    checklist: ['Invoice', 'COO', 'Product Declaration']
+  }
+  if (product === 'rice' && country === 'uae') {
+    response = {
+      readinessScore: 0.92,
+      requiredCertifications: ['FSSAI', 'UAE ESMA'],
+      labelingStandards: ['Arabic', 'Batch Number'],
+      countryNorms: ['UAE ESMA'],
+      checklist: ['Invoice', 'COO', 'Product Declaration', 'Halal Certificate']
+    }
+  }
   res.json({
     status: 'success',
     message: 'Compliance check performed',
-    data: {
-      readinessScore: 0.85,
-      requiredCertifications: ['FSSAI', 'BIS'],
-      labelingStandards: ['English', 'Hindi'],
-      countryNorms: ['US FDA', 'EU CE'],
-      checklist: ['Invoice', 'COO', 'Product Declaration']
-    }
+    data: response
   })
 })
 

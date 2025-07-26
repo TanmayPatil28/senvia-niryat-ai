@@ -4,15 +4,17 @@ const router = Router()
 
 // Multilingual support: English, Hindi, Marathi
 router.post('/translate', (req, res) => {
-  // TODO: Integrate with AI NLP service for translation
+  // Realistic demo logic: simple translation mock
+  const { text, lang } = req.body
+  let translated = {
+    en: text,
+    hi: 'यह एक डेमो हिंदी अनुवाद है',
+    mr: 'हा एक डेमो मराठी अनुवाद आहे'
+  }
   res.json({
     status: 'success',
-    original: req.body.text,
-    translated: {
-      en: req.body.text,
-      hi: 'हिंदी अनुवाद',
-      mr: 'मराठी अनुवाद'
-    }
+    original: text,
+    translated
   })
 })
 

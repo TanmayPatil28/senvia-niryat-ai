@@ -65,9 +65,9 @@ docker-compose up -d
 
 Once running, access these endpoints:
 
-- **Frontend**: http://localhost:3000 ✨
-- **Backend API**: http://localhost:5000/api 🔧
-- **AI Services**: http://localhost:8000 🧠
+ - **Frontend**: http://localhost:3000 ✨
+ - **Backend API**: http://localhost:7000/api 🔧
+ - **AI Services**: http://localhost:8000 🧠
 - **Health Check**: http://localhost:5000/health ❤️
 
 ## 🎮 Demo Features

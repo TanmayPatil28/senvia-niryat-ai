@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,34 +8,55 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+    color: #222;
+    font-family: 'Inter', 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    opacity: 1 !important;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply bg-white text-primary-700 font-semibold py-3 px-6 rounded-xl shadow transition-all duration-200;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
-  
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #f8fafc 0%, #e0e7ff 100%);
+    color: #1d4ed8;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
   .btn-secondary {
-    @apply bg-secondary-600 hover:bg-secondary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply bg-primary-700 text-white font-semibold py-3 px-6 rounded-xl shadow transition-all duration-200;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
-  
+  .btn-secondary:hover {
+    background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
   .card {
-    @apply bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden;
+    @apply bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    backdrop-filter: blur(8px);
   }
-  
   .input-field {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+    @apply w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+    background: #f8fafc;
+    font-size: 1.08rem;
   }
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(120deg, #fff 0%, #e0e7ff 100%);
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
 }

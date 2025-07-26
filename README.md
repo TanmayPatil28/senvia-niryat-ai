@@ -39,7 +39,7 @@ senvia-niryat-ai/
 
 3. **Access Applications**
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
+   - Backend API: http://localhost:7000
    - AI Services: http://localhost:8000
 
 ## 🧠 AI Capabilities

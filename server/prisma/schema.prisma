@@ -1,0 +1,29 @@
+// Prisma schema for Senvia Niryat AI
+// You must run `npx prisma generate` and `npx prisma migrate dev` after editing
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  documents Document[]
+}
+
+model Document {
+  id        Int      @id @default(autoincrement())
+  type      String
+  url       String
+  ownerId   Int
+  owner     User     @relation(fields: [ownerId], references: [id])
+  createdAt DateTime @default(now())
+}

@@ -1,6 +1,6 @@
 # Senvia Niryat AI
 
-Short, production-ready README for the Senvia Niryat AI repository. This project provides an AI-powered export-import management platform (frontend, backend, and AI microservices) designed for real-world use and demonstration.
+SThis project provides an AI-powered export-import management platform (frontend, backend, and AI microservices) designed for real-world use and demonstration.
 
 --
 

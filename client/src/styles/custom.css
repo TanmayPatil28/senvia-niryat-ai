@@ -1,67 +1,32 @@
-/* Custom styles for components previously using inline styles */
+/* Component styles: targeted tweaks for Navbar, cards and utilities */
 
-/* Navbar styles */
-.navbar-title {
-  letter-spacing: 0.02em;
-}
-.navbar-link {
-  font-size: 1.08rem;
-  font-weight: 500;
-}
+/* Navbar tweaks */
+.navbar-title { letter-spacing: 0.01em; font-weight: 700; font-size: 1.05rem; }
+.navbar-link { font-size: 1.02rem; padding: 0.6rem 1rem; }
 
 /* ExportCopilot styles */
-.copilot-card {
-  font-size: 1.1rem;
-  color: #222;
-}
-.copilot-title {
-  color: #1e40af;
-}
-.copilot-score {
-  color: #059669;
-}
-.copilot-link {
-  color: #be185d;
-}
-.copilot-download {
-  color: #1d4ed8;
-  font-weight: 600;
-}
-.copilot-bg {
-  background: #fff;
-}
-.copilot-input {
-  font-size: 1.05rem;
-  padding: 0.5rem;
-}
-.copilot-btn {
-  font-size: 1.1rem;
-  padding: 0.75rem 0;
-}
-.copilot-btn-lg {
-  font-size: 1.15rem;
-  padding: 0.85rem 0;
-}
-.copilot-xs {
-  font-size: 1.05rem;
-}
+.copilot-card { font-size: 1.05rem; color: #0b1220; }
+.copilot-title { color: #0b3a8a; font-weight: 700; }
+.copilot-score { color: #059669; }
+.copilot-link { color: #be185d; }
+.copilot-download { color: #1d4ed8; font-weight: 600; }
 
-/* Onboarding styles */
-.onboarding-card {
-  font-size: 1.15rem;
-  color: #222;
-}
-.onboarding-title {
-  color: #1e40af;
-}
-.onboarding-highlight {
-  color: #2563eb;
-  font-weight: 600;
-}
-.onboarding-list {
-  font-size: 1.1rem;
-  color: #444;
-}
-.onboarding-footer {
-  font-size: 1.05rem;
-}
+/* Onboarding */
+.onboarding-card { font-size: 1.05rem; color: #0b1220; }
+.onboarding-title { color: #0b3a8a; font-weight: 700; }
+.onboarding-highlight { color: #2563eb; font-weight: 600; }
+
+/* Small utilities */
+.kicker { font-size: 0.9rem; color: var(--muted); }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace; }
+
+/* Buttons */
+.btn-sm { padding: .5rem 0.9rem; border-radius: .75rem; }
+.btn-lg { padding: .9rem 1.4rem; border-radius: 1rem; }
+
+/* Card visuals */
+.card-compact { padding: 1rem; border-radius: 1rem; }
+.card-hero { padding: 2.4rem; border-radius: 1.25rem; }
+
+/* subtle animation for entry */
+.fade-in-up { animation: fade-in-fast 420ms cubic-bezier(.16,.8,.33,1) both; }

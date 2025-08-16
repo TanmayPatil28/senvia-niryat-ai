@@ -12,22 +12,24 @@ import TrackingPage from './pages/TrackingPage.tsx'
 function App() {
   return (
     <div className="relative flex flex-col min-h-screen overflow-x-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-br from-blue-200 via-white to-blue-400" />
+      {/* Background layers for depth */}
+      <div className="absolute inset-0 -z-20 gradient-bg" />
+      <div className="absolute -left-20 top-20 w-80 h-80 bg-primary-100 opacity-20 rounded-full animate-float-y -z-10" />
+
       <Navbar />
-      <div className="flex items-center justify-center flex-1 pt-24 pb-12">
+
+      <div className="flex items-center justify-center flex-1 pt-28 pb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="w-full max-w-6xl px-2 mx-auto sm:px-6 lg:px-12"
+          className="w-full max-w-7xl px-4 mx-auto sm:px-6 lg:px-8"
         >
-            <div className="flex flex-col gap-8 p-8 text-black bg-white border border-blue-200 shadow-2xl md:p-14 rounded-3xl">
+          <div className="p-8 text-black card card-hero card-muted rounded-2xl">
             <motion.main
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className=""
             >
               <Routes>
                 <Route path="/" element={<HomePage />} />

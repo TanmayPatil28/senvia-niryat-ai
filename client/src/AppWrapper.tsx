@@ -1,8 +1,15 @@
+import { useEffect } from 'react'
 import { useOfflineReady } from './components/useOfflineReady'
 
 function AppWrapper() {
   useOfflineReady()
-  return <>{/* ...existing code... */}</>
+
+  useEffect(() => {
+    document.body.classList.add('app-root')
+    return () => { document.body.classList.remove('app-root') }
+  }, [])
+
+  return <></>
 }
 
 export default AppWrapper

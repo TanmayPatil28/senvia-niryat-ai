@@ -1,190 +1,157 @@
 # Senvia Niryat AI
 
-Short, production-ready README for the Senvia Niryat AI repository. This project provides an AI-powered export-import management platform (frontend, backend, and AI microservices) designed for real-world use and demonstration.
+A full-stack repository implementing an AI-assisted export-import platform: React + TypeScript frontend, Node.js + TypeScript backend, and Python-based AI microservices.
 
---
+---
 
-## Table of Contents
+## Quick summary
 
-- About
-- Key Features
-- Tech Stack
-- Quick Start
-- Running locally
-- Project Structure
-- Environment
-- Contributing
-- License
+- Purpose: accelerate and simplify export-import workflows for MSMEs using document intelligence, compliance checks, tracking and analytics.
+- Contents: frontend (client/), backend (server/), and AI microservices (ai-services/).
 
+---
 
-## About
+## Key features
 
-Senvia Niryat AI is a full-stack application that streamlines and automates international trade workflows using modern frontend and backend technologies plus AI/ML microservices. It focuses on document intelligence, compliance automation, shipment tracking, predictive analytics, and a polished UX.
-
-
-## Key Features
-
-- AI-powered document processing (OCR + NLP) and validation
+- OCR + NLP based document extraction and validation
+- Compliance & rules validation for shipping and export processes
 - Predictive analytics and route optimization
-- Real-time tracking and notifications
-- PWA-capable frontend with responsive, accessible UI
-- Secure backend with JWT authentication and input validation
-- Containerized services and local development scripts
+- Responsive, PWA-capable frontend
+- Extensible microservice design for ML models
 
+---
 
-## Tech Stack
+## Tech stack
 
-- Frontend: React, TypeScript, Tailwind CSS, Framer Motion, Vite
-- Backend: Node.js, Express, TypeScript, Prisma (PostgreSQL)
-- AI/ML: Python FastAPI microservices (TensorFlow/PyTorch/OpenCV)
-- Infra: Docker, Redis, Postgres, GitHub Actions (CI/CD)
+- Frontend: React, TypeScript, Vite, Tailwind CSS
+- Backend: Node.js, Express, TypeScript, Prisma (Postgres)
+- AI: Python, FastAPI, (TensorFlow/PyTorch/OpenCV as needed)
+- Infra: Docker, Redis, Postgres
 
+---
 
-## Quick Start
+## Quick start
 
-Prerequisites: Node.js (16+), npm, Docker (optional)
+1. Clone repository
 
-1. Clone the repo
-
-```bash
+```powershell
 git clone https://github.com/TanmayPatil28/senvia-niryat-ai.git
-cd senvia-niryat-ai
+    cd senvia-niryat-ai
 ```
 
-2. Install root dev tools and start all services (root scripts orchestrate client + server + ai)
+2. (Optional) Install all packages and run both services using root helper scripts (if present):
 
-```bash
-npm run install:all
-npm run dev
+```powershell
+npm run install:all   # may install client/server deps if the script exists
+npm run dev           # concurrently starts server + client if configured
 ```
 
-3. Open the app in your browser (default Vite port may vary):
+If root scripts are not present or you prefer manual control, run services individually as below.
 
-- Web: http://localhost:3002
-- API: http://localhost:7000
-- AI services: http://localhost:8000
+---
 
+## Run services individually
 
-## Running Locally (manual)
+Frontend (Vite)
 
-- Frontend
-
-```bash
+```powershell
 cd client
 npm install
 npm run dev
 ```
 
-- Backend
+Backend (Express)
 
-```bash
+```powershell
 cd server
 npm install
 npm run dev
 ```
 
-- AI services (Python)
+AI services (Python)
 
-```bash
+```powershell
 cd ai-services
 python -m venv .venv
-source .venv/bin/activate  # or .venv\Scripts\Activate.ps1 on Windows PowerShell
+. .venv\Scripts\Activate.ps1   # Windows PowerShell
 pip install -r requirements.txt
-uvicorn app:app --reload --port 8000
+uvicorn main:app --reload --port 8000
 ```
 
+Default dev ports (may vary if in use):
 
-## Project Structure
+- Frontend: 3000-3003 (Vite may pick an available port)
+- Backend API: 7000
+- AI services: 8000
 
-```
-senvia-niryat-ai/
-├── client/          # React + TypeScript frontend (Vite)
-├── server/          # Node.js + Express backend (TypeScript)
-├── ai-services/     # Python FastAPI microservices for ML tasks
-├── docker/          # Docker compose and container configs
-├── docs/            # Documentation and diagrams
-└── README.md        # This file
-```
+---
 
+## Environment (examples)
 
-## Environment
+Create a `.env` file in `server/` with the minimum required keys:
 
-Create a `.env` file in `server/` with at least:
-
-```
+```dotenv
 DATABASE_URL="postgresql://user:password@localhost:5432/dbname"
-JWT_SECRET=your_jwt_secret
 PORT=7000
+JWT_SECRET=your_jwt_secret
 ```
 
-And for `client/` (if needed):
+Optionally for the client (create `client/.env`):
 
-```
+```dotenv
 VITE_API_URL=http://localhost:7000
 ```
 
+---
+
+## Project structure
+
+```
+senvia-niryat-ai/
+├── client/          # React + TypeScript (Vite)
+├── server/          # Node.js + TypeScript (Express, Prisma)
+├── ai-services/     # Python FastAPI microservices
+├── docker/          # (optional) docker-compose and Dockerfiles
+├── docs/            # design / architecture docs
+└── README.md        # this file
+```
+
+---
+
+## Development notes
+
+- If a port is already in use, Vite will pick a different port; check the terminal output for the exact URL.
+- The backend may fail to start if port 7000 is taken. Free the port or change `PORT` in the server `.env`.
+- Use Git feature branches and open PRs against `main`.
+
+---
 
 ## Contributing
 
 1. Fork the repo
-2. Create a feature branch: `git checkout -b feat/my-feature`
-3. Commit and push: `git commit -m "feat: my feature"`
-4. Open a pull request
+2. Create a branch: `git checkout -b feat/my-feature`
+3. Run linters/tests locally (if available)
+4. Push and open a PR with a clear description and related issue
 
-
-## License
-
-This project is provided under the MIT License. See the `LICENSE` file for details.
-
+For contributor guidelines and PR templates, request a `CONTRIBUTING.md` and I'll add one.
 
 ---
 
-If you'd like, I can also add a short `CONTRIBUTING.md`, a deploy-ready `Dockerfile/docker-compose.yml`, and a simple health-check endpoint in the API. Tell me which one to do next.
+## License
 
-🌍 Senvia Niryat AI
-Revolutionizing Global Trade for MSMEs with AI
-<div align="center">
-[![🚀 Live Demo](https://img.shields.io/badgeo/elds.io/badge/🏆ement Platform Built Specifically for MSMEs**
+MIT — see the `LICENSE` file in this repository.
 
-Transforming International Trade Through Intelligent Automation, Predictive Analytics & Seamless User Experience
+---
 
-🎮 Try Live Demo - 📖 Documentation - ⭐ Star This Repo
+## Support / contact
 
-</div>
-🎯 The MSME Trade Challenge We're Solving
-India's 63 million MSMEs contribute 30% to GDP but only 14% to exports due to systemic barriers in international trade.
+Open issues on GitHub for bugs or feature requests: https://github.com/TanmayPatil28/senvia-niryat-ai/issues
 
-💔 Critical Pain Points
-📋 Document Hell: 200+ forms per export, 40% rejection rates due to manual errors
+---
 
-⚖️ Compliance Nightmare: DGFT, APEDA, ODOP regulations confuse 78% of MSMEs
+If you want this README expanded with a short architecture diagram, a `CONTRIBUTING.md`, or a `docker-compose.yml` to run client+server+ai locally, tell me which and I will add it next.
 
-💰 High Costs: 30-40% cost overruns from inefficient logistics and hidden fees
 
-📊 No Market Intelligence: MSMEs lack AI-driven insights that large corporations use
-
-🌐 Global Barriers: Language, trust, and process complexity limit market access
-
-⏰ Time Drain: 60% of MSME time spent on paperwork instead of business growth
-
-Result: MSMEs lose ₹2.3 lakh crores annually in missed export opportunities.
-
-✅ Our Revolutionary Solution
-Senvia Niryat AI is India's first AI-native export-import platform designed exclusively for MSMEs to compete globally with enterprise-grade tools.
-
-🎪 What Makes Us Different
-🧠 AI-First Architecture: Every feature powered by machine learning
-
-📱 Mobile-Native: 80% of MSME owners prefer mobile-first solutions
-
-🌍 Global Compliance: Pre-built support for 150+ countries
-
-💡 Zero Learning Curve: Complex trade operations simplified to 3-click workflows
-
-🔒 Enterprise Security: Bank-grade security accessible to small businesses
-
-⚡ Core AI-Powered Features
-🤖 1. Intelligent Document Processor
 text
 📄 Upload Any Document → 🧠 AI Extraction → ✅ Auto Validation → 📋 Generate Forms
 OCR + NLP Pipeline: Extracts data from handwritten, scanned, or digital documents

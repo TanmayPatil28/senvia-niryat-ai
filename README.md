@@ -1,6 +1,10 @@
 # Senvia Niryat AI
 
+<<<<<<< HEAD
 A full-stack repository implementing an AI-assisted export-import platform: React + TypeScript frontend, Node.js + TypeScript backend, and Python-based AI microservices.
+=======
+This project provides an AI-powered export-import management platform (frontend, backend, and AI microservices) designed for real-world use and demonstration.
+>>>>>>> 39158d7f69f4b34a0f395d1832b213e9913cfa15
 
 ---
 

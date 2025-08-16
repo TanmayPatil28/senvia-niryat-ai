@@ -30,3 +30,14 @@
 
 /* subtle animation for entry */
 .fade-in-up { animation: fade-in-fast 420ms cubic-bezier(.16,.8,.33,1) both; }
+
+/* Dark mode overrides */
+.dark .navbar-title { color: #e6eefc; }
+.dark .navbar-link { color: #cfe0ff; }
+.dark .copilot-card { color: #e6eefc; }
+.dark .copilot-title { color: #9cc0ff; }
+.dark .copilot-score { color: #34d399; }
+.dark .copilot-download { color: #93c5fd; }
+
+/* stronger visible focus for keyboard users */
+.btn:focus-visible, .input:focus-visible { box-shadow: 0 0 0 4px rgba(59,130,246,0.12); }

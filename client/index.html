@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Senvia Niryat AI - Revolutionizing International Trade</title>
     <meta name="description" content="AI-powered export-import management platform for streamlined international trade" />
-  <meta name="theme-color" content="#ffffff" />
+  <!-- theme-color removed due to cross-browser compatibility; consider providing a manifest or platform-specific tags if needed -->
   <!-- Fonts: Inter + Manrope for a clean, professional UI -->
   <meta name="color-scheme" content="light dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Preload Google Fonts stylesheet to reduce FOIT/FOUT; fallback via noscript -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Manrope:wght@400;600;700&display=swap" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   </head>
   <body>
+  <a href="#main" class="z-50 px-3 py-2 bg-white rounded-md sr-only skip-link focus:not-sr-only focus:absolute focus:top-4 focus:left-4 dark:bg-gray-800 text-primary-700 dark:text-primary-200">Skip to content</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

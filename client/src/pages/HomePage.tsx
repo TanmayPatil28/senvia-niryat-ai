@@ -62,59 +62,91 @@ const HomePage = () => {
   ]
 
   return (
-    <div className="min-h-screen text-black gradient-bg">
+    <main className="min-h-screen text-black gradient-bg" role="main">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="pt-24 pb-12 text-center"
+        className="pt-28 pb-12 hero-section"
       >
-        <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-black lg:text-6xl hero-title">
-          <span className="block mb-2">Senvia Niryat AI</span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 via-blue-400 to-primary-700">
-            World-Class Export Copilot
-          </span>
-        </h1>
-        <p className="max-w-3xl mx-auto mb-8 text-xl font-medium text-black lg:text-2xl">
-          Streamline your export-import operations with intelligent automation, predictive analytics, and seamless compliance management. Built for global scale, designed for pure delight.
-        </p>
-        <div className="flex flex-col justify-center gap-6 sm:flex-row">
-          <Link 
-            to="/dashboard"
-            className="inline-flex items-center justify-center space-x-3 text-lg shadow-lg btn-primary"
-          >
-            <span>Get Started</span>
-            <ArrowRight className="w-6 h-6" />
-          </Link>
+        <div className="px-6 mx-auto max-w-7xl md:grid md:grid-cols-12 md:gap-16 md:items-center">
+          <div className="md:col-span-7 text-center md:text-left">
+            <p className="mb-3 text-sm font-semibold text-primary-700 uppercase tracking-widest">Export · Compliance · AI</p>
+            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-black sm:text-5xl lg:text-6xl hero-title">
+              Senvia Niryat AI
+            </h1>
+
+            <p className="max-w-2xl mb-8 text-lg font-medium text-neutral-700 lg:text-xl">
+              Streamline export-import operations with intelligent automation, predictive analytics, and seamless global compliance — built for scale, designed for delight.
+            </p>
+
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start">
+              <Link to="/dashboard" className="inline-flex items-center justify-center space-x-3 text-lg shadow-lg btn-primary btn-lg">
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link to="/onboarding" className="inline-flex items-center justify-center space-x-3 text-lg btn-ghost btn-lg">
+                <span>Book a Demo</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-10 md:mt-0 md:col-span-5 flex justify-center md:justify-end">
+            <div className="relative w-[360px] sm:w-[420px] hero-visual">
+              <div className="absolute -left-6 -top-6 w-40 h-28 rounded-2xl glass transform -rotate-2" />
+              <div className="absolute right-0 top-6 w-56 h-36 rounded-3xl bg-gradient-to-br from-white to-sky-50 shadow-xl" />
+              <div className="relative p-6 card shadow-2xl">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-sm font-semibold">Dashboard</div>
+                  <div className="text-xs text-neutral-400">Live</div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-primary-600 to-primary-400 text-white">
+                    <div className="text-2xl font-bold">95%</div>
+                    <div className="text-xs">AI Accuracy</div>
+                  </div>
+                  <div className="p-3 rounded-xl bg-white/80 text-neutral-900">
+                    <div className="text-2xl font-bold">150+</div>
+                    <div className="text-xs">Countries</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </motion.section>
 
-      {/* Stats Section */}
-      <section className="py-16 text-black bg-white">
+      {/* Stats Section (semantic dl) */}
+      <section className="py-16 text-black bg-white" aria-labelledby="stats-heading">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          <h2 id="stats-heading" className="sr-only">Key statistics</h2>
+          <dl className="grid grid-cols-2 gap-6 lg:grid-cols-4">
             {stats.map((stat, index) => {
               const Icon = stat.icon
               return (
-                <motion.div
+                <motion.article
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  className="stat-card"
                 >
-                  <Icon className="w-8 h-8 mx-auto mb-2 text-primary-600" />
-                  <div className="mb-1 text-3xl font-bold text-black">{stat.value}</div>
-                  <div className="text-neutral-700">{stat.label}</div>
-                </motion.div>
+                  <dt className="flex items-center justify-center flex-col">
+                    <div className="icon-badge mb-3">
+                      <Icon className="w-5 h-5" aria-hidden />
+                    </div>
+                    <p className="mb-1 text-3xl font-extrabold text-neutral-900">{stat.value}</p>
+                  </dt>
+                  <dd className="text-neutral-500">{stat.label}</dd>
+                </motion.article>
               )
             })}
-          </div>
+          </dl>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 text-black bg-white">
+  <section className="py-24 text-black bg-white" aria-labelledby="features-heading">
         <div className="px-6 mx-auto max-w-7xl sm:px-10 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -122,25 +154,29 @@ const HomePage = () => {
             transition={{ duration: 0.6 }}
             className="mb-20 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold tracking-tight text-black lg:text-5xl">
+            <h2 id="features-heading" className="mb-6 text-4xl font-bold tracking-tight text-black lg:text-5xl">
               Powered by Advanced AI Technology
             </h2>
             <p className="max-w-3xl mx-auto text-xl text-black">
               Our platform leverages next-gen artificial intelligence to transform how businesses handle international trade operations.
             </p>
           </motion.div>
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, idx) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-        className="flex flex-col items-center p-8 text-center card elevate"
+        className="flex flex-col items-center p-8 text-center card elevate hover:translate-y-[-6px] transform-gpu"
+        role="article"
+        aria-labelledby={`feature-${idx}-title`}
               >
-        <feature.icon className={`h-12 w-12 mb-4 ${feature.color} drop-shadow-lg`} />
-        <h3 className="mb-2 text-xl font-semibold tracking-tight text-black lg:text-2xl">{feature.title}</h3>
-        <p className="text-base text-neutral-700">{feature.description}</p>
+        <div className="icon-badge mb-4">
+          <feature.icon className={`h-5 w-5 ${feature.color}`} aria-hidden />
+        </div>
+        <h3 id={`feature-${idx}-title`} className="mb-2 text-xl font-semibold tracking-tight text-neutral-900 lg:text-2xl">{feature.title}</h3>
+        <p className="text-base text-neutral-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -186,7 +222,7 @@ const HomePage = () => {
               </div>
 
               <div className="flex space-x-4">
-                <Link to="/dashboard" className="btn-primary btn-lg">
+                <Link to="/dashboard" className="btn-primary btn-lg" aria-label="Open dashboard">
                   Try Dashboard
                 </Link>
                 <Link to="/analytics" className="btn-ghost btn-lg">
@@ -254,7 +290,7 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }
 

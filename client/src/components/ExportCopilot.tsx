@@ -35,8 +35,8 @@ const ExportCopilot: React.FC = () => {
   const handleGenerate = async (type: string) => {
     try {
       setLoading(true)
-      const res = await generateDocument({ type, product, country })
-      setDocument(res.url)
+  const res = await generateDocument({ type, product, country })
+  setDocument(res.url ?? null)
     } catch (err) {
       console.error(err)
     } finally {

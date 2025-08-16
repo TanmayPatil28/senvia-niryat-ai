@@ -3,6 +3,7 @@ import typography from '@tailwindcss/typography'
 import forms from '@tailwindcss/forms'
 
 export default {
+  darkMode: 'class', // opt-in class-based dark theme
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     container: {
@@ -45,6 +46,14 @@ export default {
           500: '#6b7280',
           700: '#374151',
         },
+      },
+      // dark color tokens for a refined dark theme
+      dark: {
+        50: '#0b1220',
+        100: '#0f1724',
+        300: '#1f2a37',
+        500: '#111827',
+        700: '#0b1220',
       },
       boxShadow: {
         'soft-xl': '0 10px 30px rgba(16,24,40,0.08)',

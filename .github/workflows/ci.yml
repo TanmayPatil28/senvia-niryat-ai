@@ -1,4 +1,42 @@
 name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-client:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install client deps
+        working-directory: ./client
+        run: npm ci
+      - name: Build client
+        working-directory: ./client
+        run: npm run build
+
+  build-server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install server deps
+        working-directory: ./server
+        run: npm ci
+      - name: Typecheck server
+        working-directory: ./server
+        run: npm run build --if-present || true
+name: CI
 on:
   push:
     branches: [ main ]

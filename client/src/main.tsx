@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
-import App from './App'
-import AppWrapper from './AppWrapper'
 import './index.css'
 import './styles/custom.css'
+import App from './App'
+import AppWrapper from './AppWrapper'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,9 +19,9 @@ const queryClient = new QueryClient({
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AppWrapper />
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+        <AppWrapper />
         <App />
         <Toaster 
           position="top-right"

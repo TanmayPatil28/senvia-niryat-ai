@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useDarkMode } from '../AppWrapper'
 import { 
   Home, 
   BarChart3, 
@@ -13,8 +14,37 @@ import {
 } from 'lucide-react'
 
 const Navbar = () => {
+  // Defensive guard: avoid rendering duplicate navbars during dev StrictMode/HMR reloads
+  if (typeof document !== 'undefined' && document.getElementById('senvia-navbar')) {
+    return null
+  }
   const [isOpen, setIsOpen] = useState(false)
+  const [isMobileView, setIsMobileView] = useState(false)
+  const menuRef = useRef<HTMLDivElement | null>(null)
   const location = useLocation()
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return
+    const onResize = () => setIsMobileView(window.innerWidth < 768)
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
+  // Manage focus trap and body scroll when mobile menu is open
+  React.useEffect(() => {
+    const body = document.body
+    if (isOpen && isMobileView) {
+      // lock scroll
+      body.style.overflow = 'hidden'
+      // focus first focusable element inside menu
+      const focusable = menuRef.current?.querySelector<HTMLElement>("a, button, input, [tabindex]:not([tabindex='-1'])")
+      focusable?.focus()
+    } else {
+      body.style.overflow = ''
+    }
+    return () => { body.style.overflow = '' }
+  }, [isOpen, isMobileView])
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
@@ -25,8 +55,8 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed top-4 left-4 right-4 z-50">
-      <div className="container">
+  <nav id="senvia-navbar" className="fixed top-4 left-4 right-4 z-[1200] glass p-2" role="navigation" aria-label="Main navigation">
+      <div className="container mx-auto flex items-center justify-between relative">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4">
             <Link to="/" className="flex items-center space-x-3" title="Go to Home">
@@ -83,20 +113,26 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-neutral-700 rounded-lg bg-white glass shadow"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-controls="senvia-mobile-menu"
               title={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
+            <div className="ml-2">
+              <DarkToggle compact />
+            </div>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+  {isOpen && isMobileView && (
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="mt-3 p-4 bg-white card-shadow rounded-xl md:hidden"
+            id="senvia-mobile-menu"
+            className="absolute left-0 right-0 top-full mt-3 p-4 bg-white card-shadow rounded-xl md:hidden z-[1300] animate-fade-in-fast"
+            ref={menuRef}
           >
             <div className="space-y-3">
               {navItems.map((item) => {
@@ -119,6 +155,9 @@ const Navbar = () => {
                   </Link>
                 )
               })}
+              <div className="pt-2">
+                <DarkToggle compact />
+              </div>
             </div>
           </motion.div>
         )}
@@ -126,5 +165,22 @@ const Navbar = () => {
     </nav>
   )
 }
+
+function DarkToggle({ compact }: { compact?: boolean } = { compact: false }) {
+  const { isDark, setIsDark } = useDarkMode()
+  return (
+    <button
+      onClick={() => setIsDark(!isDark)}
+      className={`p-2 rounded-lg transition bg-white/60 dark:bg-transparent backdrop-blur flex items-center justify-center ${compact ? 'w-9 h-9' : 'px-3 py-2'}`}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={isDark ? 'Light mode' : 'Dark mode'}
+    >
+      {isDark ? <Sun className="w-4 h-4 text-yellow-300" /> : <Moon className="w-4 h-4 text-gray-700" />}
+    </button>
+  )
+}
+
+// import icons used in DarkToggle
+import { Sun, Moon } from 'lucide-react'
 
 export default Navbar

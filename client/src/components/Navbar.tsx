@@ -25,21 +25,21 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-gray-100 shadow-xl">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="flex justify-between h-20 items-center">
+    <nav className="fixed top-0 left-0 right-0 z-50 text-black bg-white border-b border-gray-100 shadow-xl">
+      <div className="px-6 mx-auto max-w-7xl sm:px-10 lg:px-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3" title="Go to Home">
-              <Bot className="h-10 w-10 text-primary-700 drop-shadow" aria-label="SenviaNiryat.AI logo" />
-              <span className="text-2xl font-extrabold text-gray-900 tracking-tight navbar-title">
+              <Bot className="w-10 h-10 text-primary-700 drop-shadow" aria-label="SenviaNiryat.AI logo" />
+              <span className="text-2xl font-extrabold tracking-tight text-black navbar-title">
                 Senvia Niryat AI
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="items-center hidden space-x-10 md:flex">
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = location.pathname === item.path
@@ -49,12 +49,12 @@ const Navbar = () => {
                   to={item.path}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200 navbar-link ${
                     isActive 
-                      ? 'bg-gradient-to-r from-primary-100 to-white text-primary-700 shadow' 
-                      : 'text-gray-700 hover:text-primary-700 hover:bg-gradient-to-r hover:from-white hover:to-primary-50'
+                      ? 'bg-gradient-to-r from-primary-100 to-white text-black shadow' 
+                      : 'text-black hover:text-primary-700 hover:bg-gradient-to-r hover:from-white hover:to-primary-50'
                   }`}
                   title={`Go to ${item.label}`}
                 >
-                  <Icon className="h-6 w-6" />
+                  <Icon className="w-6 h-6" />
                   <span>{item.label}</span>
                 </Link>
               )
@@ -62,14 +62,14 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-3 rounded-xl text-gray-700 hover:text-primary-700 hover:bg-primary-50 shadow"
+              className="p-3 text-black shadow rounded-xl hover:text-primary-700 hover:bg-primary-50"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
               title={isOpen ? 'Close menu' : 'Open menu'}
             >
-              {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
             </button>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden py-8 border-t border-gray-100 bg-white rounded-b-2xl shadow-xl"
+            className="py-8 bg-white border-t border-gray-100 shadow-xl md:hidden rounded-b-2xl"
           >
             <div className="space-y-4">
               {navItems.map((item) => {

@@ -62,20 +62,20 @@ const HomePage = () => {
   ]
 
   return (
-    <div className="min-h-screen gradient-bg">
+    <div className="min-h-screen gradient-bg text-black">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-center pt-24 pb-12"
       >
-        <h1 className="text-5xl lg:text-7xl font-extrabold text-gray-900 mb-8 tracking-tight">
+        <h1 className="text-5xl lg:text-7xl font-extrabold text-black mb-8 tracking-tight">
           <span className="block mb-2">Senvia Niryat AI</span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 via-blue-400 to-primary-700">
             World-Class Export Copilot
           </span>
         </h1>
-        <p className="text-2xl text-gray-600 mb-10 max-w-3xl mx-auto font-medium">
+        <p className="text-2xl text-black mb-10 max-w-3xl mx-auto font-medium">
           Streamline your export-import operations with intelligent automation, predictive analytics, and seamless compliance management. Built for global scale, designed for pure delight.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -90,7 +90,7 @@ const HomePage = () => {
       </motion.section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
@@ -104,8 +104,8 @@ const HomePage = () => {
                   className="text-center"
                 >
                   <Icon className="h-8 w-8 text-primary-600 mx-auto mb-2" />
-                  <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+                  <div className="text-3xl font-bold text-black mb-1">{stat.value}</div>
+                  <div className="text-black">{stat.label}</div>
                 </motion.div>
               )
             })}
@@ -114,7 +114,7 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white text-black">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -122,10 +122,10 @@ const HomePage = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 tracking-tight">
               Powered by Advanced AI Technology
             </h2>
-            <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto">
               Our platform leverages next-gen artificial intelligence to transform how businesses handle international trade operations.
             </p>
           </motion.div>
@@ -139,8 +139,8 @@ const HomePage = () => {
                 className="card p-10 flex flex-col items-center text-center shadow-xl glass-effect"
               >
                 <feature.icon className={`h-12 w-12 mb-4 ${feature.color} drop-shadow-lg`} />
-                <h3 className="text-2xl font-bold mb-3 text-gray-900 tracking-tight">{feature.title}</h3>
-                <p className="text-lg text-gray-600 font-medium">{feature.description}</p>
+                <h3 className="text-2xl font-bold mb-3 text-black tracking-tight">{feature.title}</h3>
+                <p className="text-lg text-black font-medium">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -148,7 +148,7 @@ const HomePage = () => {
       </section>
 
       {/* Demo Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -156,10 +156,10 @@ const HomePage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
                 See AI in Action
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-black mb-8">
                 Experience how our AI transforms complex trade operations into 
                 simple, automated workflows. From document processing to route 
                 optimization, every feature is designed for maximum efficiency.
@@ -180,7 +180,7 @@ const HomePage = () => {
                     className="flex items-center space-x-3"
                   >
                     <CheckCircle className="h-5 w-5 text-green-500" />
-                    <span className="text-gray-700">{item}</span>
+                  <span className="text-black">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -204,25 +204,25 @@ const HomePage = () => {
               <div className="space-y-4">
                 <div className="card p-4">
                   <BarChart3 className="h-8 w-8 text-blue-600 mb-2" />
-                  <h4 className="font-semibold">Analytics</h4>
-                  <p className="text-sm text-gray-600">Real-time insights</p>
+                  <h4 className="font-semibold text-black">Analytics</h4>
+                  <p className="text-sm text-black">Real-time insights</p>
                 </div>
                 <div className="card p-4">
                   <FileCheck className="h-8 w-8 text-green-600 mb-2" />
-                  <h4 className="font-semibold">Documents</h4>
-                  <p className="text-sm text-gray-600">AI processing</p>
+                  <h4 className="font-semibold text-black">Documents</h4>
+                  <p className="text-sm text-black">AI processing</p>
                 </div>
               </div>
               <div className="space-y-4 mt-8">
                 <div className="card p-4">
                   <MapPin className="h-8 w-8 text-purple-600 mb-2" />
-                  <h4 className="font-semibold">Tracking</h4>
-                  <p className="text-sm text-gray-600">Live updates</p>
+                  <h4 className="font-semibold text-black">Tracking</h4>
+                  <p className="text-sm text-black">Live updates</p>
                 </div>
                 <div className="card p-4">
                   <Bot className="h-8 w-8 text-orange-600 mb-2" />
-                  <h4 className="font-semibold">AI Assistant</h4>
-                  <p className="text-sm text-gray-600">24/7 support</p>
+                  <h4 className="font-semibold text-black">AI Assistant</h4>
+                  <p className="text-sm text-black">24/7 support</p>
                 </div>
               </div>
             </motion.div>
@@ -231,17 +231,17 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 gradient-bg">
+      <section className="py-24 gradient-bg text-black">
         <div className="max-w-4xl mx-auto text-center px-6 sm:px-10 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary-700 mb-8">
+            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-8">
               Ready to Transform Your Trade Operations?
             </h2>
-            <p className="text-2xl text-gray-700 mb-10">
+            <p className="text-2xl text-black mb-10">
               Join the future of global trade. Experience the power of Senvia Niryat AI today.
             </p>
             <Link 

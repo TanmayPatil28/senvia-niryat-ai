@@ -55,7 +55,7 @@ const DashboardPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-12 tracking-tight">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-black mb-8 tracking-tight">
             Trade Dashboard
           </h1>
 
@@ -70,7 +70,7 @@ const DashboardPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="card p-10 flex flex-col items-center text-center shadow-xl glass-effect"
+                  className="card p-6 flex flex-col items-center text-center elevate"
                 >
                   <div className="flex items-center justify-between w-full mb-4">
                     <Icon className={`h-10 w-10 ${stat.color} drop-shadow-lg`} />
@@ -79,10 +79,10 @@ const DashboardPage = () => {
                       <span>{stat.change}</span>
                     </div>
                   </div>
-                  <h3 className="text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
+                  <h3 className="text-2xl font-extrabold text-black mb-2 tracking-tight">
                     {stat.value}
                   </h3>
-                  <p className="text-lg text-gray-600 font-medium">{stat.title}</p>
+                  <p className="text-sm text-neutral-600 font-medium">{stat.title}</p>
                 </motion.div>
               )
             })}

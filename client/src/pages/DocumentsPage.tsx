@@ -4,14 +4,14 @@ const DocumentsPage = () => {
   return (
     <div className="min-h-screen gradient-bg py-12">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-12 tracking-tight">Documents</h1>
-        <div className="card p-12 text-center shadow-xl glass-effect animate-fade-in">
-          <h2 className="text-2xl font-bold mb-6 flex items-center justify-center gap-2">
+        <h1 className="text-4xl lg:text-5xl font-extrabold text-black mb-8 tracking-tight">Documents</h1>
+        <div className="card p-10 text-center elevate animate-fade-in">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center justify-center gap-3 text-black">
             <span className="icon-doc text-primary-700" />
             AI Document Processing
           </h2>
-          <p className="text-lg text-gray-600 mb-4">Upload and process trade documents with AI</p>
-          <button className="btn btn-primary px-8 py-3 rounded-full font-semibold text-lg shadow-lg transition hover:scale-105">Upload Document</button>
+          <p className="text-base text-neutral-700 mb-6">Upload and process trade documents with AI for instant validation and extraction.</p>
+          <button className="btn-primary px-8 py-3 rounded-xl font-semibold text-lg">Upload Document</button>
         </div>
       </div>
     </div>

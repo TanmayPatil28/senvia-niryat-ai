@@ -55,7 +55,7 @@ const DashboardPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-black mb-8 tracking-tight">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-neutral-50 mb-8 tracking-tight">
             Trade Dashboard
           </h1>
 
@@ -79,7 +79,7 @@ const DashboardPage = () => {
                       <span>{stat.change}</span>
                     </div>
                   </div>
-                  <h3 className="text-2xl font-extrabold text-black mb-2 tracking-tight">
+                  <h3 className="text-2xl font-extrabold text-neutral-900 dark:text-neutral-50 mb-2 tracking-tight">
                     {stat.value}
                   </h3>
                   <p className="text-sm text-neutral-600 font-medium">{stat.title}</p>

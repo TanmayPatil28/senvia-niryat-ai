@@ -4,7 +4,7 @@ import { Bot } from 'lucide-react'
 
 const Onboarding = () => (
   <div className="min-h-screen flex flex-col items-center justify-center gradient-bg animate-fade-in">
-    <div className="card p-12 max-w-2xl text-center shadow-2xl rounded-2xl bg-white/90 onboarding-card">
+  <div className="card p-12 max-w-2xl text-center shadow-2xl rounded-2xl bg-surface/90 dark:bg-[#071022]/90 onboarding-card">
       <Bot className="h-16 w-16 text-primary-700 mx-auto mb-6 drop-shadow-md" aria-label="SenviaNiryat.AI logo" />
       <h1 className="text-3xl md:text-4xl font-extrabold mb-6 onboarding-title tracking-tight">Welcome to SenviaNiryat.AI</h1>
       <p className="text-lg md:text-xl text-neutral-700 mb-6">

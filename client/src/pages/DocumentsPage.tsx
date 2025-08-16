@@ -4,9 +4,9 @@ const DocumentsPage = () => {
   return (
     <div className="min-h-screen gradient-bg py-12">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <h1 className="text-4xl lg:text-5xl font-extrabold text-black mb-8 tracking-tight">Documents</h1>
+  <h1 className="text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-neutral-50 mb-8 tracking-tight">Documents</h1>
         <div className="card p-10 text-center elevate animate-fade-in">
-          <h2 className="text-2xl font-semibold mb-4 flex items-center justify-center gap-3 text-black">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center justify-center gap-3 text-neutral-900 dark:text-neutral-50">
             <span className="icon-doc text-primary-700" />
             AI Document Processing
           </h2>

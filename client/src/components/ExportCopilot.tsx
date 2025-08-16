@@ -73,7 +73,7 @@ const ExportCopilot: React.FC = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-8 card mt-12 elevate rounded-2xl bg-white copilot-card animate-fade-in">
+  <div className="max-w-2xl mx-auto p-8 card mt-12 elevate rounded-2xl bg-surface dark:bg-[#0b1220] copilot-card animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-extrabold mb-6 copilot-title tracking-tight flex items-center gap-3">
         <span className="icon-copilot text-primary-700" />
         Export Compliance Copilot
@@ -114,7 +114,7 @@ const ExportCopilot: React.FC = () => {
         {compliance && (
           <div className="p-4 bg-neutral-50 rounded-lg">
             <h3 className="font-semibold mb-2 copilot-score text-lg">Readiness Score: <span className="text-primary-700 font-bold">{typeof compliance.readinessScore === 'number' && compliance.readinessScore <= 1 ? `${Math.round(compliance.readinessScore * 100)}%` : compliance.readinessScore}</span></h3>
-            <ul className="list-disc ml-5 text-neutral-700 text-sm">
+            <ul className="list-disc ml-5 text-neutral-700 dark:text-neutral-300 text-sm">
               <li><strong>Certifications:</strong> {compliance.requiredCertifications.join(', ')}</li>
               <li><strong>Labeling:</strong> {compliance.labelingStandards.join(', ')}</li>
               <li><strong>Country Norms:</strong> {compliance.countryNorms.join(', ')}</li>

@@ -25,7 +25,7 @@ function App() {
           transition={{ duration: 0.7 }}
           className="w-full max-w-7xl px-4 mx-auto sm:px-6 lg:px-8"
         >
-          <div className="p-8 text-black card card-hero card-muted rounded-2xl">
+          <div className="p-8 text-neutral-900 dark:text-neutral-50 card card-hero card-muted dark:card-muted-dark rounded-2xl">
             <motion.main id="main" role="main"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

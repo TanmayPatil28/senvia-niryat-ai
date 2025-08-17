@@ -52,7 +52,7 @@ const stats = [
 
 const HomePage: React.FC = () => {
   return (
-    <main className="min-h-screen text-neutral-900 dark:text-neutral-50 gradient-bg" role="main">
+    <div className="min-h-screen text-neutral-900 dark:text-neutral-50 gradient-bg">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
               Transform customs and shipments with AI-driven automation
             </h1>
 
-            <p className="max-w-2xl mb-8 text-lg font-medium text-neutral-700 dark:text-neutral-300">
+            <p className="max-w-2xl mb-8 text-lg font-medium text-neutral-800 dark:text-neutral-300">
               Streamline export-import operations with intelligent automation, predictive analytics, and seamless global compliance — built for scale.
             </p>
 
@@ -259,7 +259,7 @@ const HomePage: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

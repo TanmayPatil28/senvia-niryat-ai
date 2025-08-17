@@ -239,7 +239,7 @@ a:not(.btn):hover, a:not(.btn):focus {
 
 /* subtle text color adjustments for premium feel */
 .hero-section .hero-title { color: #08122b; letter-spacing: -0.02em; }
-.hero-section p { color: #334155; }
+.hero-section p { color: #1e293b; } /* darker for better contrast ratio (meets WCAG 2AA) */
 
 /* Navbar visuals (compact glass bar) */
 #senvia-navbar {

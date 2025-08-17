@@ -7,7 +7,23 @@ const outDir = path.resolve(process.cwd(), 'a11y');
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
 (async () => {
-  const browser = await chromium.launch({ args: ['--no-sandbox'] });
+  let browser;
+  try {
+    browser = await chromium.launch({ args: ['--no-sandbox'] });
+  } catch (error) {
+    console.error('Error launching browser. Please run: npx playwright install chromium');
+    console.log('Using existing a11y artifacts (if available)...');
+    
+    // Check if artifacts already exist
+    const summaryPath = path.join(outDir, 'summary.json');
+    const reportPath = path.join(outDir, 'axe-report.json');
+    if (fs.existsSync(summaryPath) && fs.existsSync(reportPath)) {
+      console.log('Existing accessibility reports found in', outDir);
+    } else {
+      console.error('No existing accessibility reports found. Browser installation required.');
+    }
+    process.exit(1);
+  }
   const context = await browser.newContext();
   const page = await context.newPage();
 

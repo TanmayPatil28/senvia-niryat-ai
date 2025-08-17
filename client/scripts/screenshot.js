@@ -13,7 +13,27 @@ const sizes = [
 ];
 
 (async () => {
-  const browser = await chromium.launch({ args: ['--no-sandbox'] });
+  let browser;
+  try {
+    browser = await chromium.launch({ args: ['--no-sandbox'] });
+  } catch (error) {
+    console.error('Error launching browser. Please run: npx playwright install chromium');
+    console.log('Using existing screenshots (if available)...');
+    
+    // Check if screenshots already exist
+    const existingScreenshots = sizes.map(size => [
+      path.join(outDir, `${size.name}-light.png`),
+      path.join(outDir, `${size.name}-dark.png`)
+    ]).flat();
+    
+    const hasExisting = existingScreenshots.some(file => fs.existsSync(file));
+    if (hasExisting) {
+      console.log('Existing screenshots found in', outDir);
+    } else {
+      console.error('No existing screenshots found. Browser installation required.');
+    }
+    process.exit(1);
+  }
   const context = await browser.newContext();
   const page = await context.newPage();
 

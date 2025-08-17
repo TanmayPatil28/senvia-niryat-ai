@@ -13,8 +13,8 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2025-08-16T16:56:08.645Z",
-  "url": "http://localhost:3002/",
+  "timestamp": "2025-08-17T02:03:11.869Z",
+  "url": "http://localhost:4173/",
   "toolOptions": {
     "runOnly": {
       "type": "tag",
@@ -130,36 +130,6 @@
       "nodes": []
     },
     {
-      "id": "aria-required-children",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
-      "description": "Ensures elements with an ARIA role that require child roles contain them",
-      "help": "Certain ARIA roles must contain particular children",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-required-children?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-required-parent",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
-      "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
-      "help": "Certain ARIA roles must be contained by particular parents",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-required-parent?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "aria-roledescription",
       "impact": null,
       "tags": [
@@ -243,6 +213,36 @@
       "description": "Ensures <blink> elements are not used",
       "help": "<blink> elements are deprecated and must not be used",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/blink?application=axeAPI",
+      "nodes": []
+    },
+    {
+      "id": "definition-list",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "description": "Ensures <dl> elements are structured correctly",
+      "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/definition-list?application=axeAPI",
+      "nodes": []
+    },
+    {
+      "id": "dlitem",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "description": "Ensures <dt> and <dd> elements are contained by a <dl>",
+      "help": "<dt> and <dd> elements must be contained by a <dl>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/dlitem?application=axeAPI",
       "nodes": []
     },
     {
@@ -944,7 +944,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -970,7 +970,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -996,7 +996,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -1022,7 +1022,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -1262,7 +1262,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -1280,7 +1280,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -1298,7 +1298,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -1316,7 +1316,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -1386,7 +1386,7 @@
             }
           ],
           "impact": null,
-          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
+          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
           "target": [
             "#main"
           ]
@@ -1422,7 +1422,97 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"grid grid-cols-2 gap-6 lg:grid-cols-4\" role=\"list\">",
+          "target": [
+            ".gap-6"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(1) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(2) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(3) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(4) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -1440,7 +1530,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -1458,7 +1548,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -1476,7 +1566,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -1754,7 +1844,7 @@
           "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5\" aria-hidden=\"true\">",
           "target": [
-            "article:nth-child(1) > dt > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
+            "article:nth-child(1) > .flex-col.justify-center[role=\"listitem\"] > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
           ]
         },
         {
@@ -1786,7 +1876,7 @@
           "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5\" aria-hidden=\"true\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>",
           "target": [
-            "article:nth-child(2) > dt > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
+            "article:nth-child(2) > .flex-col.justify-center[role=\"listitem\"] > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
           ]
         },
         {
@@ -1818,7 +1908,7 @@
           "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5\" aria-hidden=\"true\">",
           "target": [
-            "article:nth-child(3) > dt > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
+            "article:nth-child(3) > .flex-col.justify-center[role=\"listitem\"] > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
           ]
         },
         {
@@ -1850,7 +1940,7 @@
           "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5\" aria-hidden=\"true\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>",
           "target": [
-            "article:nth-child(4) > dt > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
+            "article:nth-child(4) > .flex-col.justify-center[role=\"listitem\"] > .mb-3.icon-badge > .w-5.h-5[aria-hidden=\"true\"]"
           ]
         },
         {
@@ -2190,7 +2280,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -2208,7 +2298,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -2226,7 +2316,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -2244,7 +2334,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -2314,7 +2404,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
+          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
           "target": [
             "#main"
           ]
@@ -2350,7 +2440,97 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"grid grid-cols-2 gap-6 lg:grid-cols-4\" role=\"list\">",
+          "target": [
+            ".gap-6"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(1) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(2) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(3) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(4) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -2368,7 +2548,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -2386,7 +2566,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -2404,7 +2584,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -2484,7 +2664,7 @@
             }
           ],
           "impact": null,
-          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
+          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
           "target": [
             "#main"
           ]
@@ -2548,7 +2728,167 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"grid grid-cols-2 gap-6 lg:grid-cols-4\" role=\"list\">",
+          "target": [
+            ".gap-6"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(1) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(2) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(3) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
+          "target": [
+            "article:nth-child(4) > .flex-col.justify-center[role=\"listitem\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -2580,7 +2920,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -2612,7 +2952,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -2644,7 +2984,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -3012,7 +3352,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -3044,7 +3384,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -3076,7 +3416,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -3108,7 +3448,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -3354,7 +3694,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -3372,7 +3712,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -3390,7 +3730,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -3408,7 +3748,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -3633,7 +3973,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
+                  "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
                   "target": [
                     "#main"
                   ]
@@ -4101,7 +4441,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<div style=\"opacity: 1; transform: none;\">",
+                  "html": "<div style=\"opacity: 0; transform: translateY(3.11951px) translateZ(0px);\">",
                   "target": [
                     ".max-w-4xl > div"
                   ]
@@ -5383,7 +5723,7 @@
           "impact": "serious",
           "html": "<p class=\"mb-1 text-3xl font-extrabold text-neutral-900 dark:text-neutral-50\">1,248</p>",
           "target": [
-            "article:nth-child(1) > dt > .mb-1.text-3xl.font-extrabold"
+            "article:nth-child(1) > .flex-col.justify-center[role=\"listitem\"] > .mb-1.text-3xl.font-extrabold"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -5413,9 +5753,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Shipments</dd>",
+          "html": "<p class=\"text-neutral-500\">Shipments</p>",
           "target": [
-            "article:nth-child(1) > dd"
+            "article:nth-child(1) > .flex-col.justify-center[role=\"listitem\"] > .text-neutral-500"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -5447,7 +5787,7 @@
           "impact": "serious",
           "html": "<p class=\"mb-1 text-3xl font-extrabold text-neutral-900 dark:text-neutral-50\">98%</p>",
           "target": [
-            "article:nth-child(2) > dt > .mb-1.text-3xl.font-extrabold"
+            "article:nth-child(2) > .flex-col.justify-center[role=\"listitem\"] > .mb-1.text-3xl.font-extrabold"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -5477,9 +5817,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Compliance</dd>",
+          "html": "<p class=\"text-neutral-500\">Compliance</p>",
           "target": [
-            "article:nth-child(2) > dd"
+            "article:nth-child(2) > .flex-col.justify-center[role=\"listitem\"] > .text-neutral-500"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -5511,7 +5851,7 @@
           "impact": "serious",
           "html": "<p class=\"mb-1 text-3xl font-extrabold text-neutral-900 dark:text-neutral-50\">82%</p>",
           "target": [
-            "article:nth-child(3) > dt > .mb-1.text-3xl.font-extrabold"
+            "article:nth-child(3) > .flex-col.justify-center[role=\"listitem\"] > .mb-1.text-3xl.font-extrabold"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -5541,9 +5881,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Auto-filled</dd>",
+          "html": "<p class=\"text-neutral-500\">Auto-filled</p>",
           "target": [
-            "article:nth-child(3) > dd"
+            "article:nth-child(3) > .flex-col.justify-center[role=\"listitem\"] > .text-neutral-500"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -5575,7 +5915,7 @@
           "impact": "serious",
           "html": "<p class=\"mb-1 text-3xl font-extrabold text-neutral-900 dark:text-neutral-50\">34</p>",
           "target": [
-            "article:nth-child(4) > dt > .mb-1.text-3xl.font-extrabold"
+            "article:nth-child(4) > .flex-col.justify-center[role=\"listitem\"] > .mb-1.text-3xl.font-extrabold"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -5605,9 +5945,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Saved hrs/wk</dd>",
+          "html": "<p class=\"text-neutral-500\">Saved hrs/wk</p>",
           "target": [
-            "article:nth-child(4) > dd"
+            "article:nth-child(4) > .flex-col.justify-center[role=\"listitem\"] > .text-neutral-500"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -6537,232 +6877,172 @@
   ],
   "violations": [
     {
-      "id": "definition-list",
-      "impact": "serious",
+      "id": "aria-required-children",
+      "impact": "critical",
       "tags": [
-        "cat.structure",
+        "cat.aria",
         "wcag2a",
         "wcag131",
         "EN-301-549",
         "EN-9.1.3.1"
       ],
-      "description": "Ensures <dl> elements are structured correctly",
-      "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/definition-list?application=axeAPI",
+      "description": "Ensures elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-required-children?application=axeAPI",
       "nodes": [
         {
-          "any": [],
-          "all": [],
-          "none": [
+          "any": [
             {
-              "id": "only-dlitems",
+              "id": "aria-required-children",
               "data": {
-                "values": "article"
+                "messageKey": "unallowed",
+                "values": "article[tabindex]"
               },
               "relatedNodes": [
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 1; transform: none;\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(1.05063px) translateZ(0px);\">",
                   "target": [
                     "article:nth-child(1)"
                   ]
                 },
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 1; transform: none;\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(3.29699px) translateZ(0px);\">",
                   "target": [
                     "article:nth-child(2)"
                   ]
                 },
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 1; transform: none;\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(6.38999px) translateZ(0px);\">",
                   "target": [
                     "article:nth-child(3)"
                   ]
                 },
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 1; transform: none;\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(10.1684px) translateZ(0px);\">",
                   "target": [
                     "article:nth-child(4)"
                   ]
                 }
               ],
-              "impact": "serious",
-              "message": "dl element has direct children that are not allowed: article"
+              "impact": "critical",
+              "message": "Element has children which are not allowed: article[tabindex]"
+            },
+            {
+              "id": "aria-busy",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element uses aria-busy=\"true\" while showing a loader"
             }
           ],
-          "impact": "serious",
-          "html": "<dl class=\"grid grid-cols-2 gap-6 lg:grid-cols-4\">",
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<div class=\"grid grid-cols-2 gap-6 lg:grid-cols-4\" role=\"list\">",
           "target": [
-            "dl"
+            ".gap-6"
           ],
-          "failureSummary": "Fix all of the following:\n  dl element has direct children that are not allowed: article"
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: article[tabindex]\n  Element uses aria-busy=\"true\" while showing a loader"
         }
       ]
     },
     {
-      "id": "dlitem",
-      "impact": "serious",
+      "id": "aria-required-parent",
+      "impact": "critical",
       "tags": [
-        "cat.structure",
+        "cat.aria",
         "wcag2a",
         "wcag131",
         "EN-301-549",
         "EN-9.1.3.1"
       ],
-      "description": "Ensures <dt> and <dd> elements are contained by a <dl>",
-      "help": "<dt> and <dd> elements must be contained by a <dl>",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/dlitem?application=axeAPI",
+      "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-required-parent?application=axeAPI",
       "nodes": [
         {
           "any": [
             {
-              "id": "dlitem",
-              "data": null,
+              "id": "aria-required-parent",
+              "data": [
+                "list"
+              ],
               "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
+              "impact": "critical",
+              "message": "Required ARIA parent role not present: list"
             }
           ],
           "all": [],
           "none": [],
-          "impact": "serious",
-          "html": "<dt class=\"flex flex-col items-center justify-center\">",
+          "impact": "critical",
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
           "target": [
-            "article:nth-child(1) > dt"
+            "article:nth-child(1) > .flex-col.justify-center[role=\"listitem\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: list"
         },
         {
           "any": [
             {
-              "id": "dlitem",
-              "data": null,
+              "id": "aria-required-parent",
+              "data": [
+                "list"
+              ],
               "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
+              "impact": "critical",
+              "message": "Required ARIA parent role not present: list"
             }
           ],
           "all": [],
           "none": [],
-          "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Shipments</dd>",
+          "impact": "critical",
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
           "target": [
-            "article:nth-child(1) > dd"
+            "article:nth-child(2) > .flex-col.justify-center[role=\"listitem\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: list"
         },
         {
           "any": [
             {
-              "id": "dlitem",
-              "data": null,
+              "id": "aria-required-parent",
+              "data": [
+                "list"
+              ],
               "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
+              "impact": "critical",
+              "message": "Required ARIA parent role not present: list"
             }
           ],
           "all": [],
           "none": [],
-          "impact": "serious",
-          "html": "<dt class=\"flex flex-col items-center justify-center\">",
+          "impact": "critical",
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
           "target": [
-            "article:nth-child(2) > dt"
+            "article:nth-child(3) > .flex-col.justify-center[role=\"listitem\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: list"
         },
         {
           "any": [
             {
-              "id": "dlitem",
-              "data": null,
+              "id": "aria-required-parent",
+              "data": [
+                "list"
+              ],
               "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
+              "impact": "critical",
+              "message": "Required ARIA parent role not present: list"
             }
           ],
           "all": [],
           "none": [],
-          "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Compliance</dd>",
+          "impact": "critical",
+          "html": "<div class=\"flex flex-col items-center justify-center\" role=\"listitem\">",
           "target": [
-            "article:nth-child(2) > dd"
+            "article:nth-child(4) > .flex-col.justify-center[role=\"listitem\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
-        },
-        {
-          "any": [
-            {
-              "id": "dlitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<dt class=\"flex flex-col items-center justify-center\">",
-          "target": [
-            "article:nth-child(3) > dt"
-          ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
-        },
-        {
-          "any": [
-            {
-              "id": "dlitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Auto-filled</dd>",
-          "target": [
-            "article:nth-child(3) > dd"
-          ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
-        },
-        {
-          "any": [
-            {
-              "id": "dlitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<dt class=\"flex flex-col items-center justify-center\">",
-          "target": [
-            "article:nth-child(4) > dt"
-          ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
-        },
-        {
-          "any": [
-            {
-              "id": "dlitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Description list item does not have a <dl> parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<dd class=\"text-neutral-500\">Saved hrs/wk</dd>",
-          "target": [
-            "article:nth-child(4) > dd"
-          ],
-          "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: list"
         }
       ]
     }

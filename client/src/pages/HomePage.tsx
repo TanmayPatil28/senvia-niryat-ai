@@ -110,29 +110,29 @@ const HomePage: React.FC = () => {
   <section className="py-16 bg-surface text-neutral-900 dark:text-neutral-50 dark:bg-transparent" aria-labelledby="stats-heading">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 id="stats-heading" className="sr-only">Key statistics</h2>
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4" role="list">
+          <ul className="grid grid-cols-2 gap-6 lg:grid-cols-4" role="list">
             {stats.map((stat, index) => {
               const Icon = stat.icon
               return (
-                <motion.article
+                <motion.li role="listitem"
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="stat-card"
+                  className="list-none stat-card"
                 >
-                  <div className="flex flex-col items-center justify-center" role="listitem">
+                  <div className="flex flex-col items-center justify-center">
                     <div className="mb-3 icon-badge">
                       <Icon className="w-5 h-5" aria-hidden />
                     </div>
                     <p className="mb-1 text-3xl font-extrabold text-neutral-900 dark:text-neutral-50">{stat.value}</p>
                     <p className="text-neutral-500">{stat.label}</p>
                   </div>
-                </motion.article>
+                </motion.li>
               )
             })}
-          </div>
+          </ul>
         </div>
       </section>
 

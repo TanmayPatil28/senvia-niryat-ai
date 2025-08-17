@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2025-08-17T02:03:11.869Z",
+  "timestamp": "2025-08-17T02:07:10.596Z",
   "url": "http://localhost:4173/",
   "toolOptions": {
     "runOnly": {
@@ -944,7 +944,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -970,7 +970,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -996,7 +996,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -1022,7 +1022,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -1262,7 +1262,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -1280,7 +1280,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -1298,7 +1298,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -1316,7 +1316,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -1386,7 +1386,7 @@
             }
           ],
           "impact": null,
-          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
+          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "#main"
           ]
@@ -1512,7 +1512,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -1530,7 +1530,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -1548,7 +1548,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -1566,7 +1566,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -2280,7 +2280,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -2298,7 +2298,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -2316,7 +2316,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -2334,7 +2334,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -2404,7 +2404,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
+          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "#main"
           ]
@@ -2530,7 +2530,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -2548,7 +2548,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -2566,7 +2566,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -2584,7 +2584,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -2664,7 +2664,7 @@
             }
           ],
           "impact": null,
-          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
+          "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "#main"
           ]
@@ -2888,7 +2888,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -2920,7 +2920,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -2952,7 +2952,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -2984,7 +2984,7 @@
             }
           ],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -3352,7 +3352,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -3384,7 +3384,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -3416,7 +3416,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -3448,7 +3448,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -3694,7 +3694,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(1.80349px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-0-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-0-title\"]"
           ]
@@ -3712,7 +3712,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(6.38977px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-1-title\" tabindex=\"0\" style=\"opacity: 1; transform: none;\">",
           "target": [
             "div[aria-labelledby=\"feature-1-title\"]"
           ]
@@ -3730,7 +3730,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(12.7988px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-2-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(0.569197px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-2-title\"]"
           ]
@@ -3748,7 +3748,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(20.662px) translateZ(0px);\">",
+          "html": "<div class=\"flex flex-col items-center p-8 text-center card elevate transform-gpu\" role=\"article\" aria-labelledby=\"feature-3-title\" tabindex=\"0\" style=\"opacity: 0; transform: translateY(4.06934px) translateZ(0px);\">",
           "target": [
             "div[aria-labelledby=\"feature-3-title\"]"
           ]
@@ -3973,7 +3973,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<main id=\"main\" role=\"main\" style=\"opacity: 0; transform: translateY(1.24731px) translateZ(0px);\">",
+                  "html": "<main id=\"main\" role=\"main\" style=\"opacity: 1; transform: none;\">",
                   "target": [
                     "#main"
                   ]
@@ -4441,7 +4441,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<div style=\"opacity: 0; transform: translateY(3.11951px) translateZ(0px);\">",
+                  "html": "<div style=\"opacity: 1; transform: none;\">",
                   "target": [
                     ".max-w-4xl > div"
                   ]
@@ -6900,25 +6900,25 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(1.05063px) translateZ(0px);\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 1; transform: none;\">",
                   "target": [
                     "article:nth-child(1)"
                   ]
                 },
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(3.29699px) translateZ(0px);\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 1; transform: none;\">",
                   "target": [
                     "article:nth-child(2)"
                   ]
                 },
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(6.38999px) translateZ(0px);\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(0.0178196px) translateZ(0px);\">",
                   "target": [
                     "article:nth-child(3)"
                   ]
                 },
                 {
-                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(10.1684px) translateZ(0px);\">",
+                  "html": "<article class=\"stat-card\" style=\"opacity: 0; transform: translateY(1.05063px) translateZ(0px);\">",
                   "target": [
                     "article:nth-child(4)"
                   ]

@@ -1,15 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { 
-  TrendingUp, 
-  ArrowUp, 
-  ArrowDown, 
-  DollarSign,
-  Package,
-  Ship,
-  Globe,
-  BarChart3
-} from 'lucide-react'
+import { ArrowUp, ArrowDown, DollarSign, Package, Ship, Globe } from 'lucide-react'
 
 const DashboardPage = () => {
   const stats = [

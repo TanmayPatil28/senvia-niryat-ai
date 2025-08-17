@@ -6,7 +6,9 @@ export function useDarkMode() {
     try {
       const saved = localStorage.getItem('senvia:dark')
       if (saved !== null) return saved === '1'
-    } catch (e) {}
+    } catch (e) {
+      /* ignore localStorage read errors */
+    }
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
   })
 
@@ -14,7 +16,7 @@ export function useDarkMode() {
     const root = document.documentElement
     if (isDark) root.classList.add('dark')
     else root.classList.remove('dark')
-    try { localStorage.setItem('senvia:dark', isDark ? '1' : '0') } catch (e) {}
+  try { localStorage.setItem('senvia:dark', isDark ? '1' : '0') } catch (e) { /* ignore localStorage write errors */ }
   }, [isDark])
 
   return { isDark, setIsDark }

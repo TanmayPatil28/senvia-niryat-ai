@@ -14,10 +14,6 @@ import {
 } from 'lucide-react'
 
 const Navbar = () => {
-  // Defensive guard: avoid rendering duplicate navbars during dev StrictMode/HMR reloads
-  if (typeof document !== 'undefined' && document.getElementById('senvia-navbar')) {
-    return null
-  }
   const [isOpen, setIsOpen] = useState(false)
   const [isMobileView, setIsMobileView] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -36,7 +32,7 @@ const Navbar = () => {
   // Manage focus trap and body scroll when mobile menu is open
   React.useEffect(() => {
     const body = document.body
-    if ((isOpen || isSearchOpen) && isMobileView) {
+  if ((isOpen || isSearchOpen) && isMobileView) {
       // lock scroll
       body.style.overflow = 'hidden'
       // focus first focusable element inside menu
@@ -94,7 +90,9 @@ const Navbar = () => {
       body.style.overflow = ''
     }
     return () => { body.style.overflow = '' }
-  }, [isOpen, isMobileView])
+  }, [isOpen, isMobileView, isSearchOpen])
+
+  // NOTE: removed early return guard to comply with React Hooks rules; duplicates are rare in StrictMode
 
   // Restore focus to the menu toggle button when closing
   const toggleRef = useRef<HTMLButtonElement | null>(null)
@@ -116,16 +114,16 @@ const Navbar = () => {
     <nav id="senvia-navbar" className="fixed inset-x-4 top-4 z-[1200] glass p-3 shadow-lg" role="navigation" aria-label="Main navigation">
   <div className="mx-auto max-w-7xl senvia-grid">
         {/* Left: Logo */}
-  <div className="flex items-center flex-shrink-0 gap-4">
-          <Link to="/" className="flex items-center gap-3" title="Go to Home">
+          <div className="flex items-center flex-shrink-0 gap-4">
+          <MotionLink to="/" className="flex items-center gap-3" title="Go to Home" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <div className="p-2 shadow-lg rounded-2xl bg-gradient-to-br from-primary-100 to-primary-50 transform-gpu">
-              <Bot className="w-8 h-8 text-primary-700" aria-label="SenviaNiryat.AI logo" />
+              <Bot className="w-8 h-8 ui-icon" aria-label="SenviaNiryat.AI logo" />
             </div>
             <div className="leading-tight">
               <div className="text-sm font-semibold text-neutral-800 dark:text-neutral-50">Senvia</div>
               <div className="text-xs text-neutral-500 dark:text-neutral-300 -mt-0.5">Niryat AI</div>
             </div>
-          </Link>
+          </MotionLink>
         </div>
 
         {/* Center: nav links (desktop) */}
@@ -145,7 +143,7 @@ const Navbar = () => {
                     }`}
                     title={`Go to ${item.label}`}
                   >
-                    <Icon className="w-4 h-4" aria-hidden />
+                    <Icon className="w-4 h-4 ui-icon" aria-hidden />
                     <span className="hidden md:inline">{item.label}</span>
                   </Link>
                 )
@@ -174,8 +172,8 @@ const Navbar = () => {
 
           {/* mobile: compact actions (search icon, theme, menu) */}
           <div className="flex items-center gap-2 md:hidden">
-            <button onClick={() => setIsSearchOpen(true)} className="p-2 rounded-lg shadow-sm glass" aria-label="Search">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-neutral-800 dark:text-neutral-100" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" /></svg>
+              <button onClick={() => setIsSearchOpen(true)} className="p-2 rounded-lg shadow-sm glass" aria-label="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 ui-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" /></svg>
             </button>
             <DarkToggle compact />
             <button
@@ -184,7 +182,7 @@ const Navbar = () => {
               className="p-2 rounded-lg shadow-md glass dark:bg-transparent"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
-              {isOpen ? <X className="w-6 h-6 text-neutral-800 dark:text-neutral-100" /> : <Menu className="w-6 h-6 text-neutral-800 dark:text-neutral-100" />}
+              {isOpen ? <X className="w-6 h-6 ui-icon" /> : <Menu className="w-6 h-6 ui-icon" />}
             </button>
           </div>
         </div>
@@ -223,7 +221,7 @@ const Navbar = () => {
                       aria-current={isActive ? 'page' : undefined}
                       className={`flex items-center gap-3 px-4 py-3 rounded-lg transition ${isActive ? 'bg-primary-50 text-primary-700' : 'text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800/50'}`}
                     >
-                      <Icon className="w-5 h-5" aria-hidden />
+                        <Icon className="w-5 h-5 ui-icon" aria-hidden />
                       <span>{item.label}</span>
                     </Link>
                   )
@@ -267,7 +265,7 @@ function DarkToggle({ compact }: { compact?: boolean } = { compact: false }) {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-  className={`p-2 rounded-lg transition bg-white/60 dark:bg-white/6 backdrop-blur flex items-center justify-center ${compact ? 'w-9 h-9' : 'px-3 py-2'}`}
+  className={`p-2 rounded-lg transition glass flex items-center justify-center ${compact ? 'w-9 h-9' : 'px-3 py-2'}`}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Light mode' : 'Dark mode'}
     >

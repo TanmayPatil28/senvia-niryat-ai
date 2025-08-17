@@ -6,6 +6,8 @@
 :root {
   --bg: 255 255 255; /* used as rgb for translucent backgrounds */
   --muted: #6b7280;
+  --toast-bg: 54 54 54; /* rgb for toast background */
+  --toast-fg: 255 255 255; /* rgb for toast foreground */
   --radius-lg: 1rem;
   --glass-alpha: 0.72;
 }
@@ -16,6 +18,8 @@
   --muted: #9ca3af;
   --radius-lg: 1rem;
   --glass-alpha: 0.42;
+  --toast-bg: 20 24 28;
+  --toast-fg: 248 250 252;
 }
 
 @layer base {
@@ -23,7 +27,28 @@
 
   body {
   @apply bg-neutral-50 text-neutral-700 antialiased;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  /* Premium system font stack (prefers Apple system fonts on macOS). If SF Pro is installed locally it will be used. */
+  font-family: local('SF Pro Text'), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, 'Inter', system-ui, sans-serif;
+  font-feature-settings: "ss01" on, "liga" on;
+.ui-icon { color: #000000 !important; }
+.dark .ui-icon { color: #ffffff !important; }
+/* Ensure SVG strokes/fills follow currentColor for icon packs like lucide */
+.ui-icon, .ui-icon * { stroke: currentColor !important; fill: currentColor !important; }
+
+/* Stat card hover — subtle lift and glow for a premium feel */
+.stat-card { transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s ease, border-color .2s ease; transform-origin: center; }
+.stat-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 28px 80px rgba(2,6,23,0.12); border-color: rgba(2,6,23,0.06); }
+
+/* Premium CTA micro-interaction */
+.btn-primary { transition: transform .26s cubic-bezier(.2,.9,.2,1), box-shadow .26s ease; }
+.btn-primary:active { transform: translateY(-1px) scale(.995); }
+.btn-primary .ui-icon { margin-left: .5rem; }
+
+/* Slightly denser heading tracking for a premium, editorial look */
+.hero-title { letter-spacing: -0.018em; }
+
+/* Smooth entrance for hero visual via transform */
+.hero-visual { transform-origin: center; will-change: transform; }
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.45;
@@ -154,6 +179,8 @@ a:not(.btn):hover, a:not(.btn):focus {
 
 .gradient-bg { background: linear-gradient(135deg,#f8fafc 0%, rgba(239,246,255,0.6) 40%, #eef2ff 100%); }
 .card-muted { background: linear-gradient(180deg,#fff 0%, #fbfdff 100%); }
+.gradient-bg { background: linear-gradient(135deg,#f8fafc 0%, rgba(239,246,255,0.6) 40%, #eef2ff 100%); }
+.card-muted { background: linear-gradient(180deg, rgba(var(--bg),1) 0%, rgba(var(--bg),0.95) 100%); }
 .elevate { box-shadow: 0 12px 36px rgba(2,6,23,0.08); }
 .rounded-lg-2 { border-radius: var(--radius-lg); }
 
@@ -168,13 +195,17 @@ a:not(.btn):hover, a:not(.btn):focus {
     box-shadow: 0 10px 36px rgba(2,6,23,0.44);
   }
   .dark .stat-card p { color: theme('colors.neutral.50'); font-weight: 700; }
-.icon-badge { @apply inline-flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-50 border border-neutral-100; }
+  .icon-badge { @apply inline-flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-50 border border-neutral-100; }
+
+  /* Icon theming: pure black icons in light mode, pure white in dark mode. Use the .ui-icon class on SVG icons. */
+  .ui-icon { color: #000000 !important; }
+  .dark .ui-icon { color: #ffffff !important; }
 .btn-lg { @apply px-6 py-3 rounded-2xl text-base; }
 .shadow-2xl { box-shadow: 0 20px 40px rgba(2,6,23,0.12); }
 .glass { border-radius: 1rem; }
 
 /* Card shadow utility used by mobile menu and small panels (theme-aware) */
-.card-shadow { box-shadow: 0 14px 44px rgba(2,6,23,0.08); background: #ffffff; border-radius: 0.75rem; }
+.card-shadow { box-shadow: 0 14px 44px rgba(2,6,23,0.08); background: rgba(var(--bg),1); border-radius: 0.75rem; }
 .dark .card-shadow { background: rgba(10,14,20,0.6); }
 /* Premium hero visual polish for desktop */
 @media (min-width: 768px) {
@@ -233,7 +264,7 @@ a:not(.btn):hover, a:not(.btn):focus {
 
 /* subtle text color adjustments for premium feel */
 .hero-section .hero-title { color: #08122b; letter-spacing: -0.02em; }
-.hero-section p { color: #334155; }
+.hero-section p { color: #1e293b; } /* darker for better contrast ratio (meets WCAG 2AA) */
 
 /* Navbar visuals (compact glass bar) */
 #senvia-navbar {
@@ -263,7 +294,7 @@ a:not(.btn):hover, a:not(.btn):focus {
 }
 
 /* Surface utilities to replace literal white surfaces with theme-aware panels */
-.bg-surface { background-color: #ffffff; }
+.bg-surface { background-color: rgba(var(--bg),1); }
 .text-surface { color: theme('colors.neutral.900'); }
 .dark .bg-surface { background-color: rgba(10,14,20,0.6); }
 .dark .text-surface { color: theme('colors.neutral.100'); }

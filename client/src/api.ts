@@ -25,7 +25,7 @@ export const translateText = async (payload: TranslateRequest): Promise<Translat
   return res.data
 }
 
-export const fetchIntegrationData = async (source: string): Promise<any> => {
+export const fetchIntegrationData = async (source: string): Promise<unknown> => {
   const res = await axios.get(`${API_BASE}/integration/${source}`)
-  return res.data
+  return res.data as unknown
 }

@@ -52,7 +52,7 @@ const stats = [
 
 const HomePage: React.FC = () => {
   return (
-    <main className="min-h-screen text-neutral-900 dark:text-neutral-50 gradient-bg" role="main">
+    <div className="min-h-screen text-neutral-900 dark:text-neutral-50 gradient-bg">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,16 +66,16 @@ const HomePage: React.FC = () => {
               Transform customs and shipments with AI-driven automation
             </h1>
 
-            <p className="max-w-2xl mb-8 text-lg font-medium text-neutral-700 dark:text-neutral-300">
+            <p className="max-w-2xl mb-8 text-lg font-medium text-neutral-800 dark:text-neutral-300">
               Streamline export-import operations with intelligent automation, predictive analytics, and seamless global compliance — built for scale.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start">
-              <MotionLink to="/dashboard" whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: 'spring', stiffness: 300 }} className="inline-flex items-center justify-center space-x-3 text-lg shadow-lg btn-primary btn-lg">
+                <MotionLink to="/dashboard" whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: 'spring', stiffness: 300 }} className="inline-flex items-center justify-center space-x-3 text-lg shadow-lg btn-primary btn-lg">
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 ui-icon" />
               </MotionLink>
-              <MotionLink to="/onboarding" whileHover={{ y: -2, scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.12 }} className="inline-flex items-center justify-center space-x-3 text-lg btn-ghost btn-lg">
+                <MotionLink to="/onboarding" whileHover={{ y: -2, scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.12 }} className="inline-flex items-center justify-center space-x-3 text-lg btn-ghost btn-lg">
                 <span>Book a Demo</span>
               </MotionLink>
             </div>
@@ -110,29 +110,29 @@ const HomePage: React.FC = () => {
   <section className="py-16 bg-surface text-neutral-900 dark:text-neutral-50 dark:bg-transparent" aria-labelledby="stats-heading">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 id="stats-heading" className="sr-only">Key statistics</h2>
-          <dl className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <ul className="grid grid-cols-2 gap-6 lg:grid-cols-4" role="list">
             {stats.map((stat, index) => {
               const Icon = stat.icon
               return (
-                <motion.article
+                <motion.li role="listitem"
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="stat-card"
+                  initial={{ opacity: 0, y: 10, scale: 0.995 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 22, delay: index * 0.06 }}
+                  className="list-none stat-card"
                 >
-                  <dt className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center justify-center">
                     <div className="mb-3 icon-badge">
-                      <Icon className="w-5 h-5" aria-hidden />
+                      <Icon className="w-5 h-5 ui-icon" aria-hidden />
                     </div>
                     <p className="mb-1 text-3xl font-extrabold text-neutral-900 dark:text-neutral-50">{stat.value}</p>
-                  </dt>
-                  <dd className="text-neutral-500">{stat.label}</dd>
-                </motion.article>
+                    <p className="text-neutral-500">{stat.label}</p>
+                  </div>
+                </motion.li>
               )
             })}
-          </dl>
+          </ul>
         </div>
       </section>
 
@@ -166,7 +166,7 @@ const HomePage: React.FC = () => {
                 aria-labelledby={`feature-${idx}-title`}
               >
                 <div className="mb-4 icon-badge">
-                  <feature.icon className={`h-5 w-5 ${feature.color}`} aria-hidden />
+                  <feature.icon className={`h-5 w-5 ui-icon`} aria-hidden />
                 </div>
                 <h3 id={`feature-${idx}-title`} className="mb-2 text-xl font-semibold tracking-tight text-neutral-900 lg:text-2xl">{feature.title}</h3>
                 <p className="text-base text-neutral-600 dark:text-neutral-400">{feature.description}</p>
@@ -219,24 +219,24 @@ const HomePage: React.FC = () => {
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="p-4 card">
-                  <BarChart3 className="w-8 h-8 mb-2 text-blue-600" />
+                  <BarChart3 className="w-8 h-8 mb-2 ui-icon" />
                   <h4 className="font-semibold text-neutral-900 dark:text-neutral-50">Analytics</h4>
                   <p className="text-sm text-neutral-700 dark:text-neutral-300">Real-time insights</p>
                 </div>
                 <div className="p-4 card">
-                  <FileCheck className="w-8 h-8 mb-2 text-green-600" />
+                  <FileCheck className="w-8 h-8 mb-2 ui-icon" />
                   <h4 className="font-semibold text-neutral-900 dark:text-neutral-50">Documents</h4>
                   <p className="text-sm text-neutral-700 dark:text-neutral-300">AI processing</p>
                 </div>
               </div>
               <div className="mt-8 space-y-4">
                 <div className="p-4 card">
-                  <MapPin className="w-8 h-8 mb-2 text-purple-600" />
+                  <MapPin className="w-8 h-8 mb-2 ui-icon" />
                   <h4 className="font-semibold text-neutral-900 dark:text-neutral-50">Tracking</h4>
                   <p className="text-sm text-neutral-700 dark:text-neutral-300">Live updates</p>
                 </div>
                 <div className="p-4 card">
-                  <Bot className="w-8 h-8 mb-2 text-orange-600" />
+                  <Bot className="w-8 h-8 mb-2 ui-icon" />
                   <h4 className="font-semibold text-neutral-900 dark:text-neutral-50">AI Assistant</h4>
                   <p className="text-sm text-neutral-700 dark:text-neutral-300">24/7 support</p>
                 </div>
@@ -259,7 +259,7 @@ const HomePage: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

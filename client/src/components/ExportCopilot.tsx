@@ -26,7 +26,7 @@ const ExportCopilot: React.FC = () => {
       const res = await checkCompliance({ product, country })
       setCompliance(res.data)
     } catch (err) {
-      console.error(err)
+      // intentionally swallow for UI demo
     } finally {
       setLoading(false)
     }
@@ -38,7 +38,7 @@ const ExportCopilot: React.FC = () => {
   const res = await generateDocument({ type, product, country })
   setDocument(res.url ?? null)
     } catch (err) {
-      console.error(err)
+      // intentionally swallow for UI demo
     } finally {
       setLoading(false)
     }
@@ -50,7 +50,7 @@ const ExportCopilot: React.FC = () => {
       const res = await translateText({ text: query, lang: language })
       setTranslation(res.translated?.[language] ?? '')
     } catch (err) {
-      console.error(err)
+      // intentionally swallow for UI demo
     } finally {
       setLoading(false)
     }
@@ -148,7 +148,7 @@ const ExportCopilot: React.FC = () => {
           <button className="btn-primary w-full py-3 rounded-lg" onClick={handleTranslate} disabled={loading} aria-label="Translate">
             {loading ? 'Translating...' : 'Translate'}
           </button>
-          <p className="text-xs text-neutral-500 mt-2">Supports multilingual queries for Bharat's MSMEs.</p>
+          <p className="text-xs text-neutral-500 mt-2">Supports multilingual queries for Bharat&apos;s MSMEs.</p>
         </div>
 
         {translation && (

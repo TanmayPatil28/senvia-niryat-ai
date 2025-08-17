@@ -8,7 +8,7 @@ const Onboarding = () => (
       <Bot className="h-16 w-16 text-primary-700 mx-auto mb-6 drop-shadow-md" aria-label="SenviaNiryat.AI logo" />
       <h1 className="text-3xl md:text-4xl font-extrabold mb-6 onboarding-title tracking-tight">Welcome to SenviaNiryat.AI</h1>
       <p className="text-lg md:text-xl text-neutral-700 mb-6">
-        India's first <span className="font-semibold onboarding-highlight text-primary-700">AI-powered export compliance copilot</span> for MSMEs.
+        India&apos;s first <span className="font-semibold onboarding-highlight text-primary-700">AI-powered export compliance copilot</span> for MSMEs.
       </p>
       <ul className="text-left mb-6 list-disc ml-6 onboarding-list text-base md:text-lg text-neutral-700">
         <li>Instant export compliance checks</li>
@@ -25,6 +25,7 @@ const Onboarding = () => (
     <div className="mt-8 text-gray-500 text-sm onboarding-footer">
       <span className="font-semibold onboarding-highlight text-primary-700">Built for hackathon victory.</span> Empowering MSMEs for global trade.
     </div>
+    <p className="mt-4 text-neutral-600">Get started — sign in or create an account, and we&apos;ll walk you through the setup.</p>
   </div>
 )
 

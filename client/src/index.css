@@ -6,6 +6,8 @@
 :root {
   --bg: 255 255 255; /* used as rgb for translucent backgrounds */
   --muted: #6b7280;
+  --toast-bg: 54 54 54; /* rgb for toast background */
+  --toast-fg: 255 255 255; /* rgb for toast foreground */
   --radius-lg: 1rem;
   --glass-alpha: 0.72;
 }
@@ -16,6 +18,8 @@
   --muted: #9ca3af;
   --radius-lg: 1rem;
   --glass-alpha: 0.42;
+  --toast-bg: 20 24 28;
+  --toast-fg: 248 250 252;
 }
 
 @layer base {
@@ -154,6 +158,8 @@ a:not(.btn):hover, a:not(.btn):focus {
 
 .gradient-bg { background: linear-gradient(135deg,#f8fafc 0%, rgba(239,246,255,0.6) 40%, #eef2ff 100%); }
 .card-muted { background: linear-gradient(180deg,#fff 0%, #fbfdff 100%); }
+.gradient-bg { background: linear-gradient(135deg,#f8fafc 0%, rgba(239,246,255,0.6) 40%, #eef2ff 100%); }
+.card-muted { background: linear-gradient(180deg, rgba(var(--bg),1) 0%, rgba(var(--bg),0.95) 100%); }
 .elevate { box-shadow: 0 12px 36px rgba(2,6,23,0.08); }
 .rounded-lg-2 { border-radius: var(--radius-lg); }
 
@@ -174,7 +180,7 @@ a:not(.btn):hover, a:not(.btn):focus {
 .glass { border-radius: 1rem; }
 
 /* Card shadow utility used by mobile menu and small panels (theme-aware) */
-.card-shadow { box-shadow: 0 14px 44px rgba(2,6,23,0.08); background: #ffffff; border-radius: 0.75rem; }
+.card-shadow { box-shadow: 0 14px 44px rgba(2,6,23,0.08); background: rgba(var(--bg),1); border-radius: 0.75rem; }
 .dark .card-shadow { background: rgba(10,14,20,0.6); }
 /* Premium hero visual polish for desktop */
 @media (min-width: 768px) {
@@ -263,7 +269,7 @@ a:not(.btn):hover, a:not(.btn):focus {
 }
 
 /* Surface utilities to replace literal white surfaces with theme-aware panels */
-.bg-surface { background-color: #ffffff; }
+.bg-surface { background-color: rgba(var(--bg),1); }
 .text-surface { color: theme('colors.neutral.900'); }
 .dark .bg-surface { background-color: rgba(10,14,20,0.6); }
 .dark .text-surface { color: theme('colors.neutral.100'); }

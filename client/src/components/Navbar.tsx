@@ -14,10 +14,6 @@ import {
 } from 'lucide-react'
 
 const Navbar = () => {
-  // Defensive guard: avoid rendering duplicate navbars during dev StrictMode/HMR reloads
-  if (typeof document !== 'undefined' && document.getElementById('senvia-navbar')) {
-    return null
-  }
   const [isOpen, setIsOpen] = useState(false)
   const [isMobileView, setIsMobileView] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -36,7 +32,7 @@ const Navbar = () => {
   // Manage focus trap and body scroll when mobile menu is open
   React.useEffect(() => {
     const body = document.body
-    if ((isOpen || isSearchOpen) && isMobileView) {
+  if ((isOpen || isSearchOpen) && isMobileView) {
       // lock scroll
       body.style.overflow = 'hidden'
       // focus first focusable element inside menu
@@ -94,7 +90,9 @@ const Navbar = () => {
       body.style.overflow = ''
     }
     return () => { body.style.overflow = '' }
-  }, [isOpen, isMobileView])
+  }, [isOpen, isMobileView, isSearchOpen])
+
+  // NOTE: removed early return guard to comply with React Hooks rules; duplicates are rare in StrictMode
 
   // Restore focus to the menu toggle button when closing
   const toggleRef = useRef<HTMLButtonElement | null>(null)
@@ -267,7 +265,7 @@ function DarkToggle({ compact }: { compact?: boolean } = { compact: false }) {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-  className={`p-2 rounded-lg transition bg-white/60 dark:bg-white/6 backdrop-blur flex items-center justify-center ${compact ? 'w-9 h-9' : 'px-3 py-2'}`}
+  className={`p-2 rounded-lg transition glass flex items-center justify-center ${compact ? 'w-9 h-9' : 'px-3 py-2'}`}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Light mode' : 'Dark mode'}
     >
